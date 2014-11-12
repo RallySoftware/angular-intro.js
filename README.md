@@ -1,3 +1,14 @@
+# Rally's fork of angular-introjs
+
+This fork is a tiny tweak that works with [our fork of intro.js](https://github.com/RallySoftware/intro.js). These forks contain specific changes we needed, and are not ideal for general usage. You're better off going with the mainstream [angular-intro.js](https://github.com/mendhak/angular-intro.js)
+
+
+-----------------------------
+original README follows
+-----------------------------
+
+
+
 angular-intro.js [![Build Status](https://travis-ci.org/mendhak/angular-intro.js.svg?branch=master)](https://travis-ci.org/mendhak/angular-intro.js)
 ================
 
@@ -22,19 +33,19 @@ The two main directives are `ng-intro-options` and `ng-intro-method`.
 
 `ng-intro-options="IntroOptions"`
 
-You should create a `$scope.IntroOptions` in your controller which contains the intro.js options. The options are exactly the same as [the original](https://github.com/usablica/intro.js#options).  This also allows you to modify the options as part of your controller behavior if necessary.  You don't have to use `IntroOptions`, you can specify some other name. 
+You should create a `$scope.IntroOptions` in your controller which contains the intro.js options. The options are exactly the same as [the original](https://github.com/usablica/intro.js#options).  This also allows you to modify the options as part of your controller behavior if necessary.  You don't have to use `IntroOptions`, you can specify some other name.
 
 ### Start method
 
-`ng-intro-method="CallMe"` 
+`ng-intro-method="CallMe"`
 
 The directive will create a method on `$scope.CallMe` so that you can invoke it yourself later.  Make sure the there isn't a method `CallMe` already in your controller.  You don't have to use `CallMe`, you can specify some other name.
 
 ### Call the start method
 
-You can invoke it from an event such a click, 
+You can invoke it from an event such a click,
 
-`ng-click="CallMe();"` 
+`ng-click="CallMe();"`
 
 as long as you are still in the same controller scope.  You can also specify a step number in the method call, `CallMe(3);`.
 
@@ -42,7 +53,7 @@ You can start the intro from code, either call `$scope.CallMe();`.  If the `$sco
 
 ### Autostart
 
-If you set `ng-intro-autostart="true"`, the intro will start as soon as the directive is ready. 
+If you set `ng-intro-autostart="true"`, the intro will start as soon as the directive is ready.
 
 ### Autorefresh
 
@@ -50,7 +61,7 @@ If an intro tour includes dynamic content, use `ng-intro-autorefresh="true"` to 
 
 ### Callbacks
 
-Intro.js provides several callbacks.  You can receive these callbacks in your controller.  For example, for the `onchange` event, specify the function name in the directive. 
+Intro.js provides several callbacks.  You can receive these callbacks in your controller.  For example, for the `onchange` event, specify the function name in the directive.
 
 `ng-intro-onchange="ChangeEvent"`
 
@@ -74,20 +85,20 @@ You can also use this [sample plunker](http://plnkr.co/edit/wo9EzfbOFjM7NDoAvmjA
 If you want to build or contribute, first, get the node modules needed (grunt, bower)
 
     npm install
-    
+
 Next, use bower to get the JS libraries needed
 
     node_modules/.bin/bower install
 
 Then, whenever you make any changes, get grunt to build the minified angular-intro.min.js
 
-    node_modules/.bin/grunt 
+    node_modules/.bin/grunt
 
 If you want to view the demo page to make sure everything's working, the quickest way is to start a web server
 
     python -m SimpleHTTPServer
-    
-And browse to `http://localhost:8000/example/index.html`   
+
+And browse to `http://localhost:8000/example/index.html`
 
 
 
@@ -95,9 +106,3 @@ And browse to `http://localhost:8000/example/index.html`
 ## License
 
 As with intro.js, this is under the [MIT license](https://github.com/mendhak/angular-intro.js/blob/master/LICENSE).
-
-
-
-
-
-
